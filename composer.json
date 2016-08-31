@@ -1,0 +1,25 @@
+{
+    "name": "torfs-ict/cmsms-google-maps",
+    "description": "Google Maps module for CMS Made Simple",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kristof Torfs",
+            "email": "kristof@torfs.org"
+        }
+    ],
+    "require": {
+        "torfs-ict/cmsms": "^2.1"
+    },
+    "extra": {
+        "cmsms": {
+            "module": true,
+            "name": "GoogleMaps",
+            "bower": {
+                "gmaps": "~0.4.22",
+                "hint.css": "^2.3.2"
+            }
+        }
+    }
+}

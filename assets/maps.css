@@ -1,0 +1,26 @@
+div[data-map] > div {
+    display: block !important;
+}
+div[data-map] > div.hint--custom:before,
+div[data-map] > div.hint--custom:after {
+    left: 80%;
+    bottom: 80%;
+}
+div[data-map].GoogleMaps-scroll-enabled > div.hint--custom:before,
+div[data-map].GoogleMaps-scroll-enabled > div.hint--custom:after {
+    opacity: 0;
+}
+div[data-map] {
+    position: relative;
+    cursor: pointer;
+}
+div[data-map] > div > div {
+    transition: opacity 0.3s ease;
+}
+div[data-map].GoogleMaps-scroll-disabled > div > div {
+    opacity: 0.6;
+    pointer-events: none;
+}
+div[data-map] div[data-address] {
+    height: 400px;
+}
