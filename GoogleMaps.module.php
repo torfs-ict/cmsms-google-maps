@@ -1,8 +1,6 @@
 <?php
 
 /**
- * Class NetDesignModule
- * 
  * @property \Smarty_CMS $smarty
  * @property \CmsApp $cms
  * @property \cms_config $config
@@ -96,8 +94,8 @@ class GoogleMaps extends CMSModule {
         $module = $mo->get_module_instance('GoogleMaps');
         $smarty = $module->smarty;
         if (!array_key_exists('id', $params)) $params['id'] = 'map';
-        if (!array_key_exists('title')) $smarty->trigger_error('Mandatory parameter "title" was not set.');
-        if (!array_key_exists('address')) $smarty->trigger_error('Mandatory parameter "address" was not set.');
+        if (!array_key_exists('title', $params)) $smarty->trigger_error('Mandatory parameter "title" was not set.');
+        if (!array_key_exists('address', $params)) $smarty->trigger_error('Mandatory parameter "address" was not set.');
         if (!array_key_exists('hint', $params)) $params['hint'] = 'Click/tap on the map to activate it.';
         $smarty->assign(['id' => $params['id'], 'address' => $params['address'], 'title' => $params['title'], 'hint' => $params['hint']]);
         if ($repeat) {
